@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bahandisation</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="app-nav">
+        <button class="menu-button" id="menuButton" type="button" data-action="toggle-menu" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="brand">
+          <div class="bahandi-logo" aria-label="Bahandi"><span>BAHANDI</span></div>
+          <div>
+            <strong data-i18n="brand">Bahandisation</strong>
+            <span>Bahandi AI Ops</span>
+          </div>
+        </div>
+
+        <nav class="nav" id="sideNav" aria-label="Main navigation">
+          <button class="nav-item is-active" data-view="employee" type="button">
+            <span data-i18n="navEmployeeProfile">Профиль</span>
+          </button>
+          <button class="nav-item" data-view="report" type="button">
+            <span data-i18n="navReport">Списание</span>
+          </button>
+          <button class="nav-item" data-view="manager" type="button">
+            <span data-i18n="navManagerProfile">Профиль менеджера</span>
+          </button>
+          <button class="nav-item" data-view="requests" type="button">
+            <span data-i18n="navRequests">Проверка</span>
+          </button>
+          <button class="nav-item" data-view="analytics" type="button">
+            <span data-i18n="navAnalytics">AI-точность</span>
+          </button>
+          <button class="nav-item" data-view="suppliers" type="button">
+            <span data-i18n="navSuppliers">Поставщики</span>
+          </button>
+          <button class="nav-item" data-view="reports" type="button">
+            <span data-i18n="navReports">Отчеты</span>
+          </button>
+          <button class="nav-item" data-view="executive" type="button">
+            <span data-i18n="navExecutive">Executive</span>
+          </button>
+        </nav>
+
+        <div class="topbar-actions">
+          <select id="languageSelect" class="compact-select" aria-label="Language">
+            <option value="ru">Русский</option>
+            <option value="en">English</option>
+            <option value="kz">Қазақша</option>
+          </select>
+          <button class="ghost-button" id="themeToggle" type="button" aria-label="Theme">◐</button>
+          <button class="role-button" id="roleButton" type="button" data-action="logout">Sign up</button>
+        </div>
+      </header>
+      <button class="menu-scrim" type="button" data-action="close-menu" aria-label="Close menu"></button>
+
+      <div class="main">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow" data-i18n="topEyebrow">Bahandisation AI</p>
+            <h1 id="pageTitle">Списание за 15 секунд</h1>
+          </div>
+          <span id="apiStatus" class="status-pill">Roboflow</span>
+        </header>
+
+        <main id="app" class="content" tabindex="-1"></main>
+      </div>
+    </div>
+
+    <nav class="bottom-nav" aria-label="Mobile navigation">
+      <button class="bottom-item is-active" data-view="employee" type="button">⌂<span data-i18n="navEmployeeProfile">Профиль</span></button>
+      <button class="bottom-item" data-view="report" type="button">□<span data-i18n="bottomReport">Заявка</span></button>
+      <button class="bottom-item" data-view="requests" type="button">✓<span data-i18n="bottomApprove">Проверка</span></button>
+      <button class="bottom-item" data-view="analytics" type="button">▥<span>AI</span></button>
+    </nav>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script src="/app.js" defer></script>
+  </body>
+</html>

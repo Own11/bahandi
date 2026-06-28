@@ -1,0 +1,15 @@
+{
+  "name": "wasteiq-roboflow",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Bahandisation write-off automation with server-side Roboflow workflow integration.",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test:roboflow": "node services/roboflow/smoke-test.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
